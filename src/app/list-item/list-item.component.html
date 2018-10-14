@@ -1,0 +1,13 @@
+<mat-accordion multi="true" *ngIf="items.length > 0">
+  <mat-expansion-panel *ngFor="let item of items">
+    <mat-expansion-panel-header>
+      {{ item.content }}
+    </mat-expansion-panel-header>
+    <mat-action-row>
+      <button mat-button color="warn" (click)="onDelete(item.id)">
+        DELETE
+      </button>
+    </mat-action-row>
+  </mat-expansion-panel>
+</mat-accordion>
+<p class="mat-body-1 info-text" *ngIf="items.length <= 0">No Items</p>

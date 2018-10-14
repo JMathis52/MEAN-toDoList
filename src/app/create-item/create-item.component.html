@@ -1,0 +1,19 @@
+<mat-card>
+  <form (submit)="onAddItem(itemForm)" #itemForm="ngForm">
+    <mat-form-field appearance="outline" color="accent">
+      <mat-label>Enter a task</mat-label>
+      <input
+        matInput
+        type="text"
+        name="item"
+        ngModel
+        required
+        #item="ngModel">
+      <mat-error *ngIf="item.invalid">Please enter a task.</mat-error>
+    </mat-form-field>
+    <button
+      mat-raised-button
+      color="primary"
+      type="submit">ADD ITEM</button>
+  </form>
+</mat-card>
