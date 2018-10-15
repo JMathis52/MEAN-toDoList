@@ -1,5 +1,5 @@
 const http = require('http');
-const debug = require('debug')('node-angular');
+const debug = require('debug')('toDoList');
 const app = require('./backend/app');
 
 const normalizePort = val => {
